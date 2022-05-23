@@ -8,21 +8,15 @@
     <h1>Bienvenue sur mon magnifique site ! ✅</h1>
     {{ include('_flash_messages.html.twig') }} 
     <div class="row justify-content-center">
+        {% for article in articles %}
         <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
-                <h2 class="card-title">Article Ipsum :</h2>
-                <p class="card-text wrap-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et dignissim augue. Praesent efficitur, sem eget mattis scelerisque, nisl dui luctus eros, quis scelerisque nibh ipsum eget urna. Etiam laoreet enim non faucibus semper. Ut vel diam purus. Proin fringilla pellentesque odio, vitae mattis turpis finibus ut. Maecenas mattis commodo mauris, vitae eleifend nisl. Fusce feugiat odio quis leo vulputate gravida id ut enim. Sed vitae sapien at dui imperdiet dapibus in vitae lectus.</p>
-                <a href="#" class="btn btn-primary">Lire</a>
+                <h2 class="card-title">{{ article.title }} : </h2>
+                <p class="card-text wrap-text"> {{ article.description }} </p>
+                <a href="{{ path('detail_article', {'id': article.id}) }}" class="btn btn-primary">Lire</a>
             </div>
         </div>
-        <div class="card text-center underline" style="width: 18rem;">
-            <div class="card-body">
-                <h2 class="card-title">Article Lorem :</h2>
-                <p class="card-text wrap-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et dignissim augue. Praesent efficitur, sem eget mattis scelerisque, nisl dui luctus eros, quis scelerisque nibh ipsum eget urna. Etiam laoreet enim non faucibus semper. Ut vel diam purus. Proin fringilla pellentesque odio, vitae mattis turpis finibus ut. Maecenas mattis commodo mauris, vitae eleifend nisl. Fusce feugiat odio quis leo vulputate gravida id ut enim. Sed vitae sapien at dui imperdiet dapibus in vitae lectus.</p>
-                <a href="#" class="btn btn-primary">Lire</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

@@ -42,6 +42,16 @@ class ArticleController extends AbstractController
             return $this->redirectToRoute('app_main', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('article/index.html.twig', compact('article', 'form'));
+        return $this->renderForm('article/create.html.twig', compact('article', 'form'));
+    }
+
+    /**
+     * @Route("/article/{id}", name="detail_article")
+     */
+    public function detail(Article $article, Request $request, ArticleRepository $articleRepository): Response
+    {
+
+        return $this->render('article/detail.html.twig', compact('article'));
+
     }
 }
