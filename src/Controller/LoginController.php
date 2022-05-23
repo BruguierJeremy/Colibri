@@ -25,4 +25,15 @@ class LoginController extends AbstractController
             'error'         => $error,
         ]);
     }
+
+    /**
+     * Déconnexion
+     * 
+     * @Route("/logout", name="app_logout")
+     */
+    public function logout()
+    {
+        // Ce code ne sera jamais exécuté
+        // le composant de sécurité va intercepter la requête avant.
+    }
 }
