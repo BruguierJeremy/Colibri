@@ -9,11 +9,11 @@
     {{ include('_flash_messages.html.twig') }} 
     <form action="{{ path('app_login') }}" method="post">
         <div class="mb-3">
-            <label for="username" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="username" name="_username" value="{{ last_username }}">
+            <label for="_username" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" name="_username" value="{{ last_username }}">
         </div>
         <div class="mb-3">
-            <label for="password" class="form-label">Mot de passe</label>
+            <label for="_password" class="form-label">Mot de passe</label>
             <input type="password" class="form-control" id="password" name="_password">
         </div>
 

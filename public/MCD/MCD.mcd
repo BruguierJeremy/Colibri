@@ -1,5 +1,0 @@
-USER : user_code, email, password, roles
-:
-
-Write, 0N USER, 11 ARTICLE
-ARTICLE : article_code, title, description

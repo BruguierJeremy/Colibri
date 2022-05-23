@@ -32,6 +32,11 @@ class Article
      */
     private $user;
 
+    public function __toString()
+    {
+        return $this->email;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
