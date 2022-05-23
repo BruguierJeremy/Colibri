@@ -34,7 +34,7 @@ class Article
 
     public function __toString()
     {
-        return $this->email;
+        return $this->title;
     }
 
     public function getId(): ?int
