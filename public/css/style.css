@@ -1,0 +1,17 @@
+.wrap-text{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row{
+  margin-top: 5rem;
+}
+
+.card{
+  margin: 0 2rem 2rem 0 ;
+}
+
+.description-field{
+  height: 20rem;
+}
